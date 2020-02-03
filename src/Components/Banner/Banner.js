@@ -1,15 +1,18 @@
+
 import React,{useState} from 'react'
 import {Carousel} from 'react-bootstrap'
 import banner1 from '../../Assets/images/bannerImg/banner_1.jpg'
 import banner2 from '../../Assets/images/bannerImg/banner_2.jpg'
 
-const bannerStyle = {
-    height : "20%",
-}
+
 const captionStyle = {
     top : "30%",
     bottom : ""
 }
+const carousalStyle = {
+  height :"650px"
+}
+
 export default function Banner() {
     const [index, setIndex] = useState(0);
   
@@ -20,7 +23,7 @@ export default function Banner() {
     return (
       <div>
       <Carousel  activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
+        <Carousel.Item style = {carousalStyle}>
           <img
             src={banner1}
             alt="Expert Chefs"
@@ -30,7 +33,7 @@ export default function Banner() {
             <p>We are the best Chefs in town to bring out best flavours to you plate</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item style = {carousalStyle}>
           <img
             src={banner2}
             alt="Delicious Food"
